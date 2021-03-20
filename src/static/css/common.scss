@@ -1,0 +1,51 @@
+@import "reset.css";
+
+$mainColor: #396eba;
+$darckBlueColor: #042a68;
+$lightBlueColor :#0a89ec;
+$orangeColor : #ffad00;
+$fontColor: #000;
+$fontGrayColor: #808080;
+$grayBGColor: #efefef;
+$whiteColor: #ffffff;
+$blackColor: #000000;
+$warnColor: #cc5834;
+$contentBackground: #f7f8fa;
+
+$webSiteMinWidth: 1200px;
+$fontSizeLarge: 32px;
+$fontSizeLogo: 26px;
+$fontSizeTitle: 20px;
+$fontSizeBig: 16px;
+$fontSize15: 15px;
+$fontSizeNormal: 14px;
+$fontSizeMini: 12px;
+
+div {
+  box-sizing: border-box;
+}
+
+.page-content {
+  position: relative;
+  width: $webSiteMinWidth;
+  margin: auto;
+}
+
+.container {
+  min-width: $webSiteMinWidth;
+  min-height: 100vh;
+}
+
+.pagination {
+  height: 32px;
+  margin-top: 10px;
+  .el-pagination {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+  }
+}
+
+@import "./custom.scss";
+@import "~bootstrap/scss/bootstrap";
