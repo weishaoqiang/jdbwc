@@ -1,8 +1,8 @@
+require('./utils.js')
 $(function() {
   /**
    * header.ejs部分逻辑
    */
-  
 
   /**
    * nav.ejs导航部分逻辑

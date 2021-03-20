@@ -1,4 +1,113 @@
 .app {
   width: 100%;
   height: 100vh;
+  p {
+    margin-bottom: 0;
+  }
+  .content {
+    min-height: calc(100vh - 280px);
+    .banner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .link-img {
+        display: block;
+        width: 100%;
+        height: 450px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        img {
+          display: block;
+          min-height: 100%;
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .contact-card {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 200px;
+        .left {
+          border: 0 none;
+          background-color: transparent;
+        }
+      }
+    }
+    .inner-content {
+      .dynamic {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        .pic-list {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 10px;
+          .pic_card {
+            width: 220px;
+            height: 255px;
+            .img {
+              width: 100%;
+              height: 150px;
+              img {
+                display: block;
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .desc {
+              height: 80px;
+              padding: 20px 10px 0;
+              height: 80px;
+              -webkit-line-clamp: 2; /* 行数*/
+            }
+          }
+        }
+        .text-list {
+          padding: 0 10px;
+        }
+      }
+    }
+    .secend-list{
+      display: flex;
+      justify-content: space-between;
+      .custom-plane {
+        padding: 0 5px;
+      }
+      .bwfc {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 15px 0;
+        .pic_card {
+          padding: 0;
+          width: 180px;
+          height: 140px;
+          .img {
+            height: 100px;
+            width: 100%;
+          }
+          .desc {
+            padding: 5px 10px 0;
+            height: 40px;
+            word-break: normal;
+            -webkit-line-clamp: 1; /* 行数*/
+          }
+        }
+
+        .no-desc {
+          .desc {display: none;}
+        }
+      }
+    }
+  }
 }

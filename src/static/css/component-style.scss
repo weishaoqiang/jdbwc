@@ -1,0 +1,310 @@
+.component-header {
+  background: linear-gradient($darckBlueColor, $mainColor);
+  .inner-header {
+    max-width: 1366px;
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .left {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      .logo {
+        width: 500px;
+      }
+      .name {
+        position: relative;
+        font-size: $fontSizeLarge;
+        font-weight: 600;
+        letter-spacing: 10px;
+        line-height: 80px;
+        color: $grayBGColor;
+        &::before {
+          content: "";
+          width: 3px;
+          height: 42px;
+          position: absolute;
+          left: -35px;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: $grayBGColor;
+        }
+      }
+    }
+    .right {
+      background-color: transparent;
+      width: 210px;
+      padding: 30px 0px 20px 0px;
+      .email-link {
+        text-align: center;
+        margin-bottom: 15px;
+        color: $grayBGColor;
+        > a {
+          margin-right: 20px;
+          position: relative;
+        }
+        .link::after {
+          content: "";
+          position: absolute;
+          right: -10px;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 12px;
+          width: 1px;
+          background-color: $grayBGColor;
+        }
+      }
+    }
+  }
+}
+ 
+.component-nav {
+  width: 100%;
+  height: 50px;
+  min-width: 1200px;
+  background-color: $grayBGColor;
+  .nav-list {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    .nav-item {
+      min-width: 80px;
+      line-height: 50px;
+      flex: 1;
+      text-align: center;
+      cursor: pointer;
+      position: relative;
+      .nav-link {
+        display: block;
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        font-weight: 600;
+        color: $fontGrayColor;
+        &.active, &:hover {
+          background-color: $mainColor;
+          color: $whiteColor;
+        }
+      }
+      
+      // .child-list {
+      //   position: absolute;
+      //   z-index: 10;
+      //   width: 100%;
+      //   height: 0;
+      //   overflow: hidden;
+      //   border-bottom-left-radius: 4px;
+      //   border-bottom-right-radius: 4px;
+      //   background: rgba($blackColor, 0.5);
+      //   box-shadow: 0px 17px 35px -17px rgba(0, 0, 0, 0.3);
+      //   transition: background 200ms;
+      // }
+      // .child-item:hover {
+      //   color: $orangeColor;
+      // }
+    }
+    .nav-item:hover, .nav-item.active {
+      background-color: $mainColor;
+      color: $whiteColor;
+    }
+    .nav-item:hover {
+      .child-list {
+        height: auto;
+        transition: background 200ms;
+      }
+    }
+  }
+}
+
+.component-logo {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 500px;
+  overflow: hidden;
+  height: 80px;
+  .img {
+    width: 80px;
+    height: auto;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  .title {
+    height: 80px;
+    padding: 10px 0 0 10px;
+    color: $grayBGColor;
+    .zh {
+      font-size: $fontSizeLogo + 10;
+      font-weight: 100;
+      font-family: "gxcme";
+    }
+    .en {
+      font-size: $fontSizeMini;
+      -webkit-transform-origin-x: 0;
+      -webkit-transform: scale(0.80);
+      font-family: "Microsoft YaHei Light";
+    }
+  }
+}
+
+.component-contactcard {
+  width: 518px;
+  height: 252px;
+  background-color: rgba(180, 180, 180, 0.7);
+  color: $mainColor;
+  padding: 20px;
+  border-radius: 4px;
+  .title {
+    min-height: 64px;
+    line-height: 1.5;
+    font-size: $fontSizeTitle;
+    font-weight: 600;
+    text-align: center;
+  }
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: $lightBlueColor;
+  }
+  .tels {
+    position: relative;
+    display: flex;
+    padding: 32px 20px;
+    .left {
+      flex: 2;
+      color: $mainColor;
+    }
+    .right {
+      // flex: 1;
+      box-sizing: border-box;
+      width: 130px;
+      background-color: $mainColor;
+      padding: 5px 15px;
+      border-radius: 4px;
+      color: $grayBGColor;
+    }
+    .tel {
+      cursor: pointer;
+      height: 24px;
+      line-height: 24px;
+      font-size: $fontSizeBig;
+    }
+  }
+}
+
+.component-footer {
+  width: 100%;
+  height: 80px;
+  padding: 8px 0;
+  background-color: $mainColor;
+
+  .right {
+    text-align: center;
+
+    p {
+      height: 32px;
+      color: $whiteColor;
+    }
+  }
+}
+
+// 文章里列表样式
+.component-articlelist {
+  padding: 5px 0;
+  .list-item {
+    .item-link {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      height: 36px;
+      line-height: 36px;
+      .text {
+        flex: 1;
+        margin-right: 10px;
+        overflow:hidden; //超出的文本隐藏
+        text-overflow:ellipsis; //溢出用省略号显示
+        white-space:nowrap; //溢出不换行
+        color: $darckBlueColor;
+        .icon-little-point {
+          display: none;
+        }
+        .icon-little-circle {
+          display: inline;
+        }
+        &:hover {
+          .title {
+            color: $orangeColor;
+          }
+          .icon-little-point {
+            display: inline;
+          }
+          .icon-little-circle {
+            display: none;
+          }
+        }
+      }
+      .date {
+        width: 50px;
+      }
+    }
+  }
+}
+
+// 卡片图片组件样式
+.component-img-card {
+  cursor: pointer;
+  width: 100%;
+  &:hover {
+    .img > img {
+      transition: all 200ms;
+    }
+    .desc {
+      color: $darckBlueColor;
+    }
+  }
+  .img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+  }
+  .desc {
+    // max-height: 80px;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: $fontSize15;
+    line-height: 30px;
+    color: $fontGrayColor;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  }
+  .lineNum1 {
+    padding: 5px 10px 0;
+    height: 40px;
+    word-break: normal;
+    -webkit-line-clamp: 1; /* 行数*/
+  }
+  .lineNum2 {
+    padding: 20px 10px 0;
+    height: 80px;
+    -webkit-line-clamp: 2; /* 行数*/
+  }
+}

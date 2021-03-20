@@ -28,6 +28,10 @@ body{
   -moz-osx-font-smoothing: grayscale;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 /* 去除浏览器默认的margin和padding, 自行删减一些不必要的标签 */
 body,
 p,

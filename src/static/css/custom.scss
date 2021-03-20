@@ -1,3 +1,147 @@
-@import './tamplate-style/header.scss';
-@import './tamplate-style/logo.scss';
-@import './tamplate-style/nav.scss';
+@import './component-style.scss';
+
+// 公共布局
+.content {
+  background-color: $grayBGColor;
+}
+
+.inner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $whiteColor;
+}
+
+// custom-plane样式
+.custom-plane {
+  width: 100%;
+  background-color: $whiteColor;
+  border-radius: 4px;
+  padding: 0 5px;
+  .plane-head {
+    height: 44px;
+    line-height: 44px;
+    position: relative;
+    font-size: $fontSizeTitle;
+    color: $darckBlueColor;
+    position: relative;
+
+    .title {
+      display: inline-block;
+      position: relative;
+      p {
+        position: relative;
+        height: 44px;
+        line-height: 44px;
+        &::after {
+        content: "";
+        position: absolute;
+        width: 70%;
+        bottom: -3px;
+        height: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $lightBlueColor;
+      }
+      }
+    }
+
+    .title-center {
+      margin: auto;
+      position: absolute;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+    }
+
+    .more {
+      float: right;
+      cursor: pointer;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      a {
+        text-decoration: none;
+      }
+      &_padding {
+        padding-right: 12px;
+      }
+      .iconfont {
+        font-size: $fontSizeTitle;
+      }
+      .desc {
+        margin-left: 10px;
+      }
+    }
+  }
+  .plane-head::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+
+    background: $lightBlueColor;
+  }
+  .plane-content {
+    padding: 10px 0;
+  }
+}
+
+// 阴影样式
+.box-shadow {
+  transition: all 200ms;
+  box-shadow: 0px 0px 0px 0px rgba(39, 39, 39, 0);
+  &:hover {
+    transition: all 200ms;
+    box-shadow: 0px 17px 35px -17px rgba(0, 0, 0, 0.3);
+  }
+}
+
+// 首页图标列表
+.icon-list {
+  display: flex;
+  justify-content: space-between;
+  a:hover {
+    text-decoration: none;
+  }
+  .font-box {
+    flex: 1;
+    .iconfont-outer {
+      float: left;
+      margin: 5px 18px;
+    }
+    .iconfont {
+      cursor: pointer;
+      font-size: 90px;
+      color: $lightBlueColor;
+      display: block;
+    }
+    .desc {
+      display: block;
+      text-align: center;
+      color: $lightBlueColor;
+    }
+    :hover {
+      .iconfont {
+        color: $mainColor;
+      }
+      .desc {
+          color: $mainColor;
+      }
+    }
+  }
+  .friend-link {
+    width: 390px;
+    .pic-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .pic-list_card {
+      margin-bottom: 10px;
+    }
+  }
+} 

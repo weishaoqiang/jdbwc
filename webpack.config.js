@@ -3,6 +3,7 @@ const HtmlWebapackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
+const Swiper = require('swiper')
 
 const SRCPATH = path.resolve(__dirname, 'src')
 
@@ -77,7 +78,7 @@ const config = {
     }),
     new webpack.ProvidePlugin({
       $: "jquery",
-      jQuery: 'jquery'
+      jQuery: "jquery"
     }),
     new CopyWebpackPlugin({
       patterns: [
