@@ -5,6 +5,14 @@
   background-color: $grayBGColor;
 }
 
+// 整页面
+.main-content {
+  width: 100%;
+  min-width: 1366px;
+  min-height: 100vh;
+}
+
+// 1200px宽度的页面内容
 .inner-content {
   max-width: 1200px;
   margin: 0 auto;
@@ -22,7 +30,7 @@
     height: 44px;
     line-height: 44px;
     position: relative;
-    font-size: $fontSizeTitle;
+    font-size: $fontSizeBig;
     color: $darckBlueColor;
     position: relative;
 
@@ -145,3 +153,14 @@
     }
   }
 } 
+
+// 分页器
+.pagelist {
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  margin-top: 15px;
+  li {
+    display: inline;
+  }
+}

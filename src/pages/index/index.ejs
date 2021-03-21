@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>保卫处_广西机电职业技术学院</title>
+</head>
+<body>
+  <div id="app" class="main-content app">
+    <%- require('../../tamplate/header.ejs')() %>
+    <%- require('../../tamplate/nav.ejs')() %>
+    <div class="content">
+      <div class="banner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <a class="swiper-slide link-img">
+              <img src="http://www.gxcme.edu.cn/g/bwc/img/home_banner1.jpg" alt="">
+            </a>
+            <a class="swiper-slide link-img"><img src="http://www.gxcme.edu.cn/g/bwc/img/home_banner2.jpg" alt=""></a>
+            <a class="swiper-slide link-img"><img src="http://www.gxcme.edu.cn/g/bwc/img/home_banner3.jpg" alt=""></a>
+            <a class="swiper-slide link-img"><img src="http://www.gxcme.edu.cn/g/bwc/img/home_banner4.jpg" alt=""></a>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+        <%- require('../../tamplate/contactcard.ejs')({customClass: 'contact-card'}) %>
+      </div>
+      <div class="inner-content">
+        <div class="custom-plane">
+          <div class="plane-head">
+            <div class="more">
+              <a href="javascript:;">
+                <i class="iconfont icon-more" title="更多"></i>
+              </a>
+            </div>
+            <h3 class="title title-center">
+              <p>工作·动态</p>
+            </h3>
+          </div>
+          <div class="plane-content dynamic">
+            <div class="pic-list col-8">
+              <%- require('../../tamplate/imgcard.ejs')({
+                customClass: 'pic_card',
+                imgurl: 'home_banner1.jpg',
+                link: 'javascript:;',
+                title: ''
+              }) %>
+              <%- require('../../tamplate/imgcard.ejs')({
+                customClass: 'pic_card',
+                imgurl: 'home_banner2.jpg',
+                link: 'javascript:;',
+                title: ''
+              }) %>
+              <%- require('../../tamplate/imgcard.ejs')({
+                customClass: 'pic_card',
+                imgurl: 'home_banner3.jpg',
+                link: 'javascript:;',
+                title: ''
+              }) %>
+            </div>
+            <div class="text-list col-4">
+              <%- require('../../tamplate/articlelist.ejs')({
+                id: 430,
+                row:'7',
+                col:'1'
+              }) %>
+            </div>
+          </div>
+        </div>
+        <div class="secend-list">
+          <div class="custom-plane col-4">
+            <div class="plane-head">
+              <div class="more">
+                <a href="javascript:;">
+                  <i class="iconfont icon-more" title="更多"></i>
+                </a>
+              </div>
+              <h3 class="title">
+                <p>政策·法规</p>
+              </h3>
+            </div>
+            <div class="text-list">
+              <%- require('../../tamplate/articlelist.ejs')({
+                id: 430,
+                row:'7',
+                col:'1'
+              }) %>
+            </div>
+          </div>
+          <div class="custom-plane col-4">
+            <div class="plane-head">
+              <div class="more">
+                <a href="javascript:;">
+                  <i class="iconfont icon-more" title="更多"></i>
+                </a>
+              </div>
+              <h3 class="title">
+                <p>通知·公告</p>
+              </h3>
+            </div>
+            <div class="text-list">
+              <%- require('../../tamplate/articlelist.ejs')({
+                id: 432,
+                row:'7',
+                col:'1'
+              }) %>
+            </div>
+          </div>
+          <div class="custom-plane col-4">
+            <div class="plane-head">
+              <div class="more">
+                <a href="javascript:;">
+                  <i class="iconfont icon-more" title="更多"></i>
+                </a>
+              </div>
+              <h3 class="title">
+                <p>武装·保卫风采</p>
+              </h3>
+            </div>
+            <div class="text-list bwfc">
+              <%- require('../../tamplate/imgcard.ejs')({ 
+                customClass: 'pic_card ', 
+                imgurl: 'home_banner1.jpg', 
+                link: 'javascript:;',
+                title: ''
+               }) %>
+              <%- require('../../tamplate/imgcard.ejs')({ 
+                customClass: 'pic_card ',
+                imgurl: 'home_banner2.jpg', 
+                link: 'javascript:;',
+                title: ''
+              }) %>
+              <%- require('../../tamplate/imgcard.ejs')({ 
+                customClass: 'pic_card ', 
+                imgurl: 'home_banner3.jpg', 
+                link: 'javascript:;',
+                title: '' 
+              }) %>
+              <%- require('../../tamplate/imgcard.ejs')({ 
+                customClass: 'pic_card ', 
+                imgurl: 'home_banner4.jpg', 
+                link: 'javascript:;',
+                title: '' 
+              }) %>
+            </div>
+          </div>
+        </div>
+        <div class="secend-list">
+          <div class="custom-plane col-8">
+          <div  class="list icon-list">
+            <div  class="font-box">
+              <a  href="mailto:bwc@gxcme.edu.cn" class="iconfont-outer"><i
+                   class="iconfont icon-email"></i>
+                <p  class="desc">安全隐患反馈</p>
+              </a>
+              <a  href="javascript:;" class="iconfont-outer"><i 
+                  class="iconfont icon-car"></i>
+                <p  class="desc">车辆管理</p>
+              </a>
+              <a  href="javascript:;" class="iconfont-outer"><i 
+                  class="iconfont icon-system"></i>
+                <p  class="desc">户籍管理</p>
+              </a>
+              <a  href="javascript:;" class="iconfont-outer"><i 
+                  class="iconfont icon-approval"></i>
+                <p  class="desc">活动审批</p>
+              </a>
+              <a  href="javascript:;" class="iconfont-outer"><i 
+                  class="iconfont icon-download"></i>
+                <p  class="desc">文件下载</p>
+              </a></div>
+          </div>
+          </div>
+          <div class="custom-plane col-4">
+            <div class="plane-head">
+              <div class="more">
+                <a href="javascript:;">
+                  <i class="iconfont icon-more" title="更多"></i>
+                </a>
+              </div>
+              <h3 class="title">
+                <p>友情.链接</p>
+              </h3>
+            </div>
+            <div class="text-list bwfc">
+              <%- require('../../tamplate/imgcard.ejs')({ 
+                customClass: 'pic_card no-desc', 
+                imgurl: 'gxdx.png', 
+                link: 'https://bwc.gxu.edu.cn/',
+                title: '' 
+              }) %>
+              <%- require('../../tamplate/imgcard.ejs')({ 
+                customClass: 'pic_card no-desc', 
+                imgurl: 'gxmzdx.png', 
+                link: 'http://bwc.gxun.edu.cn/',
+                title: '' }) %>
+              <%- require('../../tamplate/imgcard.ejs')({ 
+                customClass: 'pic_card no-desc', 
+                imgurl: 'gxsfdx.png', 
+                link: 'http://bwc.gxnu.edu.cn/mainm.htm',
+                title: '' }) %>
+              <%- require('../../tamplate/imgcard.ejs')({ 
+                customClass: 'pic_card no-desc', 
+                imgurl: 'gxysxy.png', 
+                link: 'https://wzbbwc.gxau.edu.cn/',
+                title: '' 
+              }) %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <%- require('../../tamplate/footer.ejs')() %>
+    </div>
+  </div>
+</body>
+</html>

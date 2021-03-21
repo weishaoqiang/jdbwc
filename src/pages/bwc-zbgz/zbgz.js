@@ -1,0 +1,1 @@
+import './zbgz.scss';

@@ -1,0 +1,22 @@
+.bgxz {
+  width: 100%;
+  min-height: 100vh;
+
+  .inner-content {
+    width: 1200px;
+    min-height: calc(100vh - 280px);
+    margin: 0 auto;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+  }
+
+  .sub-nav {
+    width: 260px;
+    margin-right: 20px;
+  }
+
+  .main {
+    flex: 1;
+  }
+}

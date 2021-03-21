@@ -45,6 +45,7 @@
         > a {
           margin-right: 20px;
           position: relative;
+          color: $contentBackground;
         }
         .link::after {
           content: "";
@@ -144,12 +145,15 @@
       font-size: $fontSizeLogo + 10;
       font-weight: 100;
       font-family: "gxcme";
+      margin-bottom: 0;
     }
     .en {
       font-size: $fontSizeMini;
       -webkit-transform-origin-x: 0;
       -webkit-transform: scale(0.80);
       font-family: "Microsoft YaHei Light";
+      margin-bottom: 0;
+      margin-top: 0;
     }
   }
 }
@@ -176,7 +180,7 @@
   .tels {
     position: relative;
     display: flex;
-    padding: 32px 20px;
+    padding: 12px 20px;
     .left {
       flex: 2;
       color: $mainColor;
@@ -210,7 +214,9 @@
 
     p {
       height: 32px;
+      line-height: 32px;
       color: $whiteColor;
+      margin-bottom: 0;
     }
   }
 }
@@ -252,7 +258,7 @@
         }
       }
       .date {
-        width: 50px;
+        width: 100px;
       }
     }
   }
@@ -306,5 +312,73 @@
     padding: 20px 10px 0;
     height: 80px;
     -webkit-line-clamp: 2; /* 行数*/
+  }
+}
+
+// 竖导航栏
+.component-subnav {
+  width: 100%;
+  .title {
+    font-size: $fontSizeTitle;
+    background-color: $mainColor;
+    font-weight: bold;
+    color: $whiteColor;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+  }
+
+  .text-list {
+    color: $fontGrayColor;
+    .item-nav {
+      height: 56px;
+      line-height: 56px;
+      padding-left: 50px;
+      text-align: left;
+      display: block;
+      text-decoration: none;
+      color: $fontGrayColor;
+
+      &.active {
+        background-color: $lightBlueColor;
+        color: $grayBGColor;
+      }
+
+      &:hover {
+        background-color: $lightBlueColor;
+        color: $grayBGColor;
+      }
+    }
+  }
+}
+
+// 文章
+.component-artical {
+  width: 100%;
+
+  .position {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: $fontGrayColor;
+  }
+
+  .title {
+    font-family: '宋体';
+    text-align: center;
+    // padding: 20px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+  } 
+
+  .publish {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .detail {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 18px;
   }
 }

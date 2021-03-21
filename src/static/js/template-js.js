@@ -7,12 +7,17 @@ $(function() {
   /**
    * nav.ejs导航部分逻辑
    */
-  $('#nav .nav-link').on('click', function(e) {
-    try {
-      $(".nav-link").removeClass("active");
-      $(this).addClass('active')
-    } catch (err) {
-      console.error(err);
-    }
-  })
+  activeNavFun()
 })
+
+const activeNavFun = function() {
+  const curPath = location.pathname
+  for (let i = 0; i < $('#nav .nav-link').length; i++) {
+    const item = $('#nav .nav-link')[i]
+    // console.log(item.dataset.path);
+    $(item).removeClass("active")
+    if (curPath.indexOf(item.dataset.path) > -1) {
+      $(item).addClass('active')
+    }
+  }
+}

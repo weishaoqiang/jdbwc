@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>保卫处_广西机电职业技术学院_政策法规</title>
+</head>
+<body>
+  <div class="main-content zcfg">
+    <%- require('../../tamplate/header.ejs')() %>
+    <%- require('../../tamplate/nav.ejs')() %>
+    <div class="inner-content">
+      <div class="sub-nav">
+        <%- require('../../tamplate/sub-nav.ejs')({
+          title: '政策法规',
+          subitem: [{
+            link: '/bwc/bwc-jgsz.html#cszz', name: '处室职责'
+          }]
+        }) %>
+      </div>
+      <div class="main">
+        <div class="custom-plane">
+          <div class="plane-head">
+            <div class="more">
+              <div class="position">当前位置：{dede:field name='position'/}</div>
+            </div>
+            <h3 class="title">
+              <p>政策·法规</p>
+            </h3>
+          </div>
+          <div class="plane-content">
+            <div class="text-list">
+            <%- require('../../tamplate/articalist-page.ejs')({
+                pagesize: '10'
+              }) %>
+            </div>
+            <ul class="pagelist">
+              {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="2"/}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- require('../../tamplate/footer.ejs')() %>
+  </div>
+</body>
+</html>

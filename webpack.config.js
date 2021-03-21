@@ -6,18 +6,27 @@ const webpack = require('webpack')
 const Swiper = require('swiper')
 
 const SRCPATH = path.resolve(__dirname, 'src')
-
 const config = {
-  mode: 'development',
+  mode: process.env.NODE_ENV === 'dev' ? 'development' : 'production',
   entry: {
+    index: path.join(SRCPATH, '/pages/index/index.js'),
+    jgsz: path.join(SRCPATH, '/pages/bwc-jgsz/jgsz.js'),
+    gzdt: path.join(SRCPATH, '/pages/bwc-gzdt/gzdt.js'),
     fwdt: path.join(SRCPATH, '/pages/bwc-fwdt/fwdt.js'),
+    zbgz: path.join(SRCPATH, '/pages/bwc-zbgz/zbgz.js'),
+    zcfg: path.join(SRCPATH, '/pages/bwc-zcfg/zcfg.js'),
+    xcjy: path.join(SRCPATH, '/pages/bwc-xcjy/xcjy.js'),
+    xfaq: path.join(SRCPATH, '/pages/bwc-xfaq/xfaq.js'),
+    bgxz: path.join(SRCPATH, '/pages/bwc-bgxz/bgxz.js'),
+
+    wenzhang: path.join(SRCPATH, '/pages/bwc-wenzhang/wenzhang.js'),
     templateJs: path.join(SRCPATH, '/static/js/template-js.js'),
     commonscss: path.join(SRCPATH, '/static/css/common.scss'),
   },
   output: {
-    path: path.resolve(__dirname, 'bwc'),
-    filename: '[name].js',
-    publicPath: '/bwc'
+    path: path.resolve(__dirname, 'bwc/'),
+    filename: 'js/[name].js',
+    publicPath: process.env.NODE_ENV === 'dev' ? '/bwc' : 'http://www.gxcme.edu.cn/g/bwc/'
   },
   resolve: {
     alias: {
@@ -71,10 +80,66 @@ const config = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebapackPlugin({
-      template: path.join(SRCPATH, 'pages/bwc-fwdt/index.ejs'),
+      template: path.join(SRCPATH, 'pages/index/index.ejs'),
+      filename: 'index.html',
+      chunks: ['index', 'commonscss', 'templateJs'],
+      inject: 'head'
+    }),
+    new HtmlWebapackPlugin({
+      template: path.join(SRCPATH, 'pages/bwc-jgsz/jgsz.ejs'),
+      filename: 'bwc-jgsz.html',
+      chunks: ['jgsz', 'commonscss', 'templateJs'],
+      inject: 'head'
+    }),
+    new HtmlWebapackPlugin({
+      template: path.join(SRCPATH, 'pages/bwc-gzdt/gzdt.ejs'),
+      filename: 'bwc-gzdt.html',
+      chunks: ['gzdt', 'commonscss', 'templateJs'],
+      inject: 'head'
+    }),
+    new HtmlWebapackPlugin({
+      template: path.join(SRCPATH, 'pages/bwc-fwdt/fwdt.ejs'),
       filename: 'bwc-fwdt.html',
       chunks: ['fwdt', 'commonscss', 'templateJs'],
-      inject: 'body'
+      inject: 'head'
+    }),
+    new HtmlWebapackPlugin({
+      template: path.join(SRCPATH, 'pages/bwc-zbgz/zbgz.ejs'),
+      filename: 'bwc-zbgz.html',
+      chunks: ['zbgz', 'commonscss', 'templateJs'],
+      inject: 'head'
+    }),
+    new HtmlWebapackPlugin({
+      template: path.join(SRCPATH, 'pages/bwc-zcfg/zcfg.ejs'),
+      filename: 'bwc-zcfg.html',
+      chunks: ['zcfg', 'commonscss', 'templateJs'],
+      inject: 'head'
+    }),
+    new HtmlWebapackPlugin({
+      template: path.join(SRCPATH, 'pages/bwc-xcjy/xcjy.ejs'),
+      filename: 'bwc-xcjy.html',
+      chunks: ['xcjy', 'commonscss', 'templateJs'],
+      inject: 'head'
+    }),
+    new HtmlWebapackPlugin({
+      template: path.join(SRCPATH, 'pages/bwc-xfaq/xfaq.ejs'),
+      filename: 'bwc-xfaq.html',
+      chunks: ['xfaq', 'commonscss', 'templateJs'],
+      inject: 'head'
+    }),
+    new HtmlWebapackPlugin({
+      template: path.join(SRCPATH, 'pages/bwc-bgxz/bgxz.ejs'),
+      filename: 'bwc-bgxz.html',
+      chunks: ['bgxz', 'commonscss', 'templateJs'],
+      inject: 'head'
+    }),
+
+
+    new HtmlWebapackPlugin({
+      template: path.join(SRCPATH, 'pages/bwc-wenzhang/wenzhang.ejs'),
+      filename: 'bwc-wenzhang.html',
+      chunks: ['wenzhang', 'commonscss', 'templateJs'],
+      inject: 'head'
     }),
     new webpack.ProvidePlugin({
       $: "jquery",

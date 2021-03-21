@@ -1,0 +1,14 @@
+<div class="component-articlelist">
+  {dede:list pagesize='<%= pagesize %>' titlelen="80"}
+  <div class="list-item">
+    <div class="item-link">
+      <div class="text">
+        <i class="iconfont icon-little-point"></i>
+        <i class="iconfont icon-little-circle"></i>
+        <a href="[field:arcurl/]" title="[field:fulltitle/]">[field:title/]</a>
+      </div>
+      <span class="date">[[field:pubdate function="MyDate('Y-m-d',@me)"/]]</span>
+    </div>
+  </div>
+  {/dede:list}
+</div>

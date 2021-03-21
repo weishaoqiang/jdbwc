@@ -1,0 +1,1 @@
+import './xfaq.scss';

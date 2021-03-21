@@ -1,0 +1,8 @@
+<div class="component-artical">
+  <div class="position">您所在的位置：{dede:field name='position'/}</div>
+  <div class="title">{dede:field.title/}</div>
+  <div class="publish">发布时间：{dede:field.pubdate function="MyDate('Y-m-d H:i:s',@me)"/} | 编辑：{dede:field.writer/}</div>
+  <div class="detail">{dede:field name="body"/}</div>
+  <p class="preNews">{dede:prenext get='pre'/}</p>
+  <p class="preNews">{dede:prenext get='next'/}</p>
+</div>
