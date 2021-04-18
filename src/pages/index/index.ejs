@@ -24,7 +24,6 @@
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
-        <%- require('../../tamplate/contactcard.ejs')({customClass: 'contact-card'}) %>
       </div>
       <div class="inner-content">
         <div class="custom-plane">
@@ -32,6 +31,7 @@
             <div class="more">
               <a href="javascript:;">
                 <i class="iconfont icon-more" title="更多"></i>
+                <span>更多</span>
               </a>
             </div>
             <h3 class="title title-center">
@@ -40,7 +40,7 @@
           </div>
           <div class="plane-content dynamic">
             <div class="pic-list col-8">
-              <%- require('../../tamplate/imgcard.ejs')({
+              <!-- <%- require('../../tamplate/imgcard.ejs')({
                 customClass: 'pic_card',
                 imgurl: 'home_banner1.jpg',
                 link: 'javascript:;',
@@ -51,7 +51,8 @@
                 imgurl: 'home_banner2.jpg',
                 link: 'javascript:;',
                 title: ''
-              }) %>
+              }) %> -->
+              <%- require('../../tamplate/contactcard.ejs')({customClass: 'contact-card' }) %>
               <%- require('../../tamplate/imgcard.ejs')({
                 customClass: 'pic_card',
                 imgurl: 'home_banner3.jpg',
@@ -74,6 +75,7 @@
               <div class="more">
                 <a href="javascript:;">
                   <i class="iconfont icon-more" title="更多"></i>
+                  <span>更多</span>
                 </a>
               </div>
               <h3 class="title">
@@ -93,6 +95,7 @@
               <div class="more">
                 <a href="javascript:;">
                   <i class="iconfont icon-more" title="更多"></i>
+                  <span>更多</span>
                 </a>
               </div>
               <h3 class="title">
@@ -112,6 +115,7 @@
               <div class="more">
                 <a href="javascript:;">
                   <i class="iconfont icon-more" title="更多"></i>
+                  <span>更多</span>
                 </a>
               </div>
               <h3 class="title">
@@ -148,35 +152,43 @@
         </div>
         <div class="secend-list">
           <div class="custom-plane col-8">
-          <div  class="list icon-list">
-            <div  class="font-box">
-              <a  href="mailto:bwc@gxcme.edu.cn" class="iconfont-outer"><i
-                   class="iconfont icon-email"></i>
-                <p  class="desc">安全隐患反馈</p>
-              </a>
-              <a  href="javascript:;" class="iconfont-outer"><i 
-                  class="iconfont icon-car"></i>
-                <p  class="desc">车辆管理</p>
-              </a>
-              <a  href="javascript:;" class="iconfont-outer"><i 
-                  class="iconfont icon-system"></i>
-                <p  class="desc">户籍管理</p>
-              </a>
-              <a  href="javascript:;" class="iconfont-outer"><i 
-                  class="iconfont icon-approval"></i>
-                <p  class="desc">活动审批</p>
-              </a>
-              <a  href="javascript:;" class="iconfont-outer"><i 
-                  class="iconfont icon-download"></i>
-                <p  class="desc">文件下载</p>
-              </a></div>
+            <div  class="list icon-list">
+              <div  class="font-box">
+                <a  href="mailto:bwc@gxcme.edu.cn" class="iconfont-outer"><i
+                    class="iconfont icon-email"></i>
+                  <p  class="desc">安全隐患反馈</p>
+                </a>
+                <a  href="javascript:;" class="iconfont-outer"><i 
+                    class="iconfont icon-car"></i>
+                  <p  class="desc">车辆管理</p>
+                </a>
+                <a  href="javascript:;" class="iconfont-outer"><i 
+                    class="iconfont icon-system"></i>
+                  <p  class="desc">户籍管理</p>
+                </a>
+                <a  href="javascript:;" class="iconfont-outer"><i 
+                    class="iconfont icon-approval"></i>
+                  <p  class="desc">活动审批</p>
+                </a>
+                <a  href="javascript:;" class="iconfont-outer"><i 
+                    class="iconfont icon-download"></i>
+                  <p  class="desc">文件下载</p>
+                </a>
+                <a href="javascript:;" class="iconfont-outer"><i class="iconfont icon-sos"></i>
+                  <p class="desc">报案入口</p>
+                </a>
+                <a href="javascript:;" class="iconfont-outer"><i class="iconfont icon-shiwuzhaoling"></i>
+                  <p class="desc">失误招领</p>
+                </a>
+              </div>  
+            </div>
           </div>
-          </div>
-          <div class="custom-plane col-4">
+          <!-- <div class="custom-plane col-4">
             <div class="plane-head">
               <div class="more">
                 <a href="javascript:;">
                   <i class="iconfont icon-more" title="更多"></i>
+                  <span>更多</span>
                 </a>
               </div>
               <h3 class="title">
@@ -207,10 +219,11 @@
                 title: '' 
               }) %>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
+    <%- require('../../tamplate/friend-links.ejs')() %>
     <div class="footer">
       <%- require('../../tamplate/footer.ejs')() %>
     </div>

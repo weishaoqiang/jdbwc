@@ -1,10 +1,8 @@
 <div class="component-subnav">
   <div class="title"><%= title %></div>
   <div class="text-list">
-    <!-- <%= for (var i = 0; i < subitem.length; i++) { %>
-      <a href="javascript:;" data-set="123" class="item-nav active">123</a>
-    <% } %> -->
-    <!-- <a href="javascript:;" class="item-nav">456</a>
-    <a href="javascript:;" class="item-nav">789</a> -->
+    <% for (var i = 0; i < subitem.length; i++) { %>
+      <a href="<%= subitem[i].link %>" data-set="" class="item-nav"><%= subitem[i].name %></a>
+    <% } %>
   </div>
 </div>
